@@ -16,7 +16,7 @@ import { map } from 'rxjs/operators';
 import Swal from 'sweetalert2';
 import { User } from './user.model';
 import { AppState } from '../app.reducer';
-import { SetUserAction } from './auth.actions';
+import { SetUserAction, UnsetUserAction } from './auth.actions';
 import { Subscription } from 'rxjs';
 
 
@@ -46,7 +46,7 @@ export class AuthService {
                   const newUser = new User( usuarioObj );
                   this.store.dispatch( new SetUserAction( newUser ) );
                   this.user = newUser;  /// newuser le envia los valores a la variable user
-                  console.log(newUser);
+                  //console.log(newUser);
 
                 });
 
@@ -123,6 +123,8 @@ export class AuthService {
 
     this.router.navigate(['/login']);
     this.afAuth.auth.signOut();
+
+    this.store.dispatch(new UnsetUserAction());
 
   }
 

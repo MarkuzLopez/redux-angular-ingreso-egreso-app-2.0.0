@@ -15,6 +15,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+//graficas
+import { ChartsModule } from 'ng2-charts';
+
 // Environment
 import { environment } from '../environments/environment';
 
@@ -28,6 +31,7 @@ import { DetalleComponent } from './ingreso-egreso/detalle/detalle.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { OrdenarIngresoEgresoPipe } from './ingreso-egreso/ordenar-ingreso-egreso.pipe';
 
 
 
@@ -42,11 +46,13 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     DetalleComponent,
     FooterComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    OrdenarIngresoEgresoPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ChartsModule,
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
