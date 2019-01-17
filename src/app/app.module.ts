@@ -37,8 +37,6 @@ import { AppComponent } from './app.component';
 
 /// modulos personalizados 
 import { AuthModule } from './auth/auth.module';
-//import { SharedModule } from './shared/shared.module';
-//import { IngresoEgresoModule } from './ingreso-egreso/ingreso-egreso.module';
 
 @NgModule({
   declarations: [

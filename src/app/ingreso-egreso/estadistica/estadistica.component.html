@@ -57,8 +57,8 @@
                             <p class="mb-0 text-right">Diferencia</p>
                             <div class="fluid-container">
                               <h3 [ngClass]="{
-                                'text-success': ingresos - egresos > 0,
-                                'text-danger': ingresos - egresos < 0
+                                'text-success': ingreso - egreso > 0,
+                                'text-danger': ingreso - egreso < 0
                               }"
                                   class="font-weight-medium text-right mb-0">
                                 {{ ingreso - egreso | currency }}
